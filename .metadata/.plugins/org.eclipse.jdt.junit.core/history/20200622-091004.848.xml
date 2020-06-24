@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EmployeeTest (2)" project="NewTenSolution" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="employeeSolution.EmployeeTest" time="0.07" displayname="EmployeeTest" uniqueid="[engine:junit-jupiter]/[class:employeeSolution.EmployeeTest]">
+    <testcase name="getHourlyEmployeePaymentWithNegativeHoursAndWage" classname="employeeSolution.EmployeeTest" time="0.03" displayname="getHourlyEmployeePaymentWithNegativeHoursAndWage()" uniqueid="[engine:junit-jupiter]/[class:employeeSolution.EmployeeTest]/[method:getHourlyEmployeePaymentWithNegativeHoursAndWage()]"/>
+    <testcase name="getHourlyEmployeePaymentWithNegativeWage" classname="employeeSolution.EmployeeTest" time="0.0" displayname="getHourlyEmployeePaymentWithNegativeWage()" uniqueid="[engine:junit-jupiter]/[class:employeeSolution.EmployeeTest]/[method:getHourlyEmployeePaymentWithNegativeWage()]"/>
+    <testcase name="invoicePaymentWithNegativePrice" classname="employeeSolution.EmployeeTest" time="0.01" displayname="invoicePaymentWithNegativePrice()" uniqueid="[engine:junit-jupiter]/[class:employeeSolution.EmployeeTest]/[method:invoicePaymentWithNegativePrice()]"/>
+    <testcase name="getHourlyEmployeePaymentWithNegativeHours" classname="employeeSolution.EmployeeTest" time="0.0" displayname="getHourlyEmployeePaymentWithNegativeHours()" uniqueid="[engine:junit-jupiter]/[class:employeeSolution.EmployeeTest]/[method:getHourlyEmployeePaymentWithNegativeHours()]"/>
+    <testcase name="invoicePayment" classname="employeeSolution.EmployeeTest" time="0.01" displayname="invoicePayment()" uniqueid="[engine:junit-jupiter]/[class:employeeSolution.EmployeeTest]/[method:invoicePayment()]"/>
+    <testcase name="invoicePatmentWithNegativeQuantitys" classname="employeeSolution.EmployeeTest" time="0.006" displayname="invoicePatmentWithNegativeQuantitys()" uniqueid="[engine:junit-jupiter]/[class:employeeSolution.EmployeeTest]/[method:invoicePatmentWithNegativeQuantitys()]"/>
+    <testcase name="getHourlyEmployeePayment" classname="employeeSolution.EmployeeTest" time="0.014" displayname="getHourlyEmployeePayment()" uniqueid="[engine:junit-jupiter]/[class:employeeSolution.EmployeeTest]/[method:getHourlyEmployeePayment()]"/>
+  </testsuite>
+</testrun>

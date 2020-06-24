@@ -1,0 +1,9 @@
+package exceptionClass;
+
+public class InvoiceException extends Exception {
+	
+	public InvoiceException(String message) {
+		
+	}
+
+}

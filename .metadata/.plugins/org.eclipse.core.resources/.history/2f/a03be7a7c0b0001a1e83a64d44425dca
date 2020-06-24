@@ -1,0 +1,22 @@
+package Randoms;
+
+public class Randoms {
+
+	private String[] article = { "the", "a", "one", "some", "any" };
+	private String[] noun = { "boy", "girl", "dog", "town", "car"};
+	private String[] verb;
+
+	public String[] getArticle() {
+		return article;
+	}
+
+	public String[] getNoun() {
+		return noun;
+	}
+
+	public String[] getVerb() {
+		return verb;
+	}
+	
+	
+}

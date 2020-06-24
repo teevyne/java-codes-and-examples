@@ -1,0 +1,35 @@
+package Randoms;
+
+public class Randoms {
+
+	private String[] article = { "the", "a", "one", "some", "any" };
+	private String[] noun = { "boy", "girl", "dog", "town", "car" };
+	private String[] verb = { "drove", "jumped", "ran", "walked", "skipped" };
+	private String[] preposition = { "to", "from", "over", "under", "on" };
+	
+	private StringBuilder sentence = new StringBuilder(75);
+
+	public String[] getArticle() {
+		return article;
+	}
+
+	public String[] getNoun() {
+		return noun;
+	}
+
+	public String[] getVerb() {
+		return verb;
+	}
+
+	public String[] getPreposition() {
+		return preposition ;
+	}
+	
+	public void 
+
+	public StringBuilder getSentence() {
+		return sentence;
+	}
+	
+	
+}

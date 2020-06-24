@@ -1,0 +1,16 @@
+package employeeSolution;
+
+import java.math.BigInteger;
+
+public class HourlyEmployee extends Employee {
+	
+	public HourlyEmployee(String fname, String lname, String social) {
+		super(fname, lname, social);
+	}
+
+	@Override
+	public double getPaymentAmount() {
+		return BigInteger.ZERO.doubleValue();
+	}
+
+}

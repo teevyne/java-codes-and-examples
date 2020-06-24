@@ -1,0 +1,12 @@
+package Randoms;
+
+public class Randoms {
+
+	private String[] article;
+
+	public String[] getArticle() {
+		// TODO Auto-generated method stub
+		return article;
+	}
+
+}

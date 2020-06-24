@@ -1,0 +1,97 @@
+package employeeSolution;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import exceptionClass.PayableException;
+
+class EmployeeTest {
+	
+	Payable john;
+	Payable steve;
+	Payable james;
+	Payable efe;
+	
+	Payable faceShield;
+
+	@BeforeEach
+	void setUp() throws Exception {
+		john = new SalariedEmployee("John", "Johnson", "001122");
+		steve = new HourlyEmployee("Steve", "Stephenson", "001123");
+		james = new CommissionEmployee("James", "Jameson", "001124");
+		efe = new BasePlusCommissionEmployee("Efe", "Efeson", "001125");
+		
+		faceShield = new Invoice("1", "Face Shield", 35, 1200);
+	}
+	
+	@Test
+	void invoicePayment() {
+		try {
+			double paymentAmount = faceShield.getPaymentAmount();
+			assertEquals(42000, paymentAmount);
+		}catch (PayableException ex) {
+			ex.printStackTrace();
+		}
+		
+	}
+	
+	@Test
+	void invoicePatmentWithNegativeQuantity() throws PayableException {
+		Invoice faceShield = new Invoice("1", "Face protection", -35, 1200);
+		double paymentAmount = faceShield.getPaymentAmount();
+		assertEquals(0, paymentAmount);
+	}
+	
+	@Test
+	void invoicePaymentWithNegativePrice() throws PayableException {
+		Invoice faceShield = new Invoice("1", "Face protection", 35, -1200);
+		double paymentAmount = faceShield.getPaymentAmount();
+		assertEquals(0, paymentAmount);
+	}
+	
+	// Always note your container life
+//	@Test
+//	void invoicePaymentWithLargeQuantityValue() {
+//		Invoice faceShield = new Invoice("1", "Face protection", 350000000, 12);
+//		double paymentAmount = faceShield.getPaymentAmount();
+//		assertEquals(0, paymentAmount);
+//	}
+	
+	@Test
+	void getHourlyEmployeePayment() {
+		HourlyEmployee steve = new HourlyEmployee("Stephen", "Stepheson", "002");
+		steve.setHours(5);
+		steve.setWage(1000);
+		double paymentAmount = steve.getPaymentAmount();
+		assertEquals(5000, paymentAmount);
+	}
+	
+	@Test
+	void getHourlyEmployeePaymentWithNegativeHours () {
+		HourlyEmployee steve = new HourlyEmployee("Stephen", "Stepheson", "002");
+		steve.setHours(-5);
+		steve.setWage(1000);
+		double paymentAmount = steve.getPaymentAmount();
+		assertEquals(0, paymentAmount);
+	}
+	
+	@Test
+	void getHourlyEmployeePaymentWithNegativeWage () {
+		HourlyEmployee steve = new HourlyEmployee("Stephen", "Stepheson", "002");
+		steve.setHours(5);
+		steve.setWage(-1000);
+		double paymentAmount = steve.getPaymentAmount();
+		assertEquals(0, paymentAmount);
+	}
+	
+	@Test
+	void getHourlyEmployeePaymentWithNegativeHoursAndWage () {
+		HourlyEmployee steve = new HourlyEmployee("Stephen", "Stepheson", "002");
+		steve.setHours(-5);
+		steve.setWage(-1000);
+		double paymentAmount = steve.getPaymentAmount();
+		assertEquals(0, paymentAmount);
+	}
+}

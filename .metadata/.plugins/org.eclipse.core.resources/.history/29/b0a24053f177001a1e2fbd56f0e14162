@@ -1,0 +1,12 @@
+package creditCardVerifier;
+
+public class CCard 
+{
+	public static String verifyCreditCard(long cardNumber) 
+	{		
+		if(ValidityChecker.isValid(cardNumber))
+			return String.format("%d is valid", cardNumber);
+		else
+			return String.format("%d is invalid", cardNumber);
+	}
+}

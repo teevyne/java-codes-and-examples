@@ -1,0 +1,66 @@
+package Randoms;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class RandomsTest {
+	Randoms wordGenerator;
+
+	@BeforeEach
+	void setUp() {
+		wordGenerator = new Randoms();
+	}
+
+	@Test
+	void  testObjectReference() {
+		assertNotNull(wordGenerator);
+	}
+	
+	@Test
+	void testArticleArrayElements() {
+		assertNotNull(wordGenerator.getArticle());
+		assertEquals("the", wordGenerator.getArticle()[0]);
+		assertEquals("a", wordGenerator.getArticle()[1]);
+		assertEquals("one", wordGenerator.getArticle()[2]);
+		assertEquals("some", wordGenerator.getArticle()[3]);
+		assertEquals("any", wordGenerator.getArticle()[4]);
+	}
+	
+	@Test
+	void testNounArrayElements() {
+		assertNotNull(wordGenerator.getNoun());
+		assertEquals("boy", wordGenerator.getNoun()[0]);
+		assertEquals("girl", wordGenerator.getNoun()[1]);
+		assertEquals("dog", wordGenerator.getNoun()[2]);
+		assertEquals("town", wordGenerator.getNoun()[3]);
+		assertEquals("car", wordGenerator.getNoun()[4]);
+	}
+	
+	@Test
+	void testVerbArrayElements() {
+		assertNotNull(wordGenerator.getVerb());
+		assertEquals("drove", wordGenerator.getVerb()[0]);
+		assertEquals("jumped", wordGenerator.getVerb()[1]);
+		assertEquals("ran", wordGenerator.getVerb()[2]);
+		assertEquals("walked", wordGenerator.getVerb()[3]);
+		assertEquals("skipped", wordGenerator.getVerb()[4]);
+	}
+
+	@Test
+	void testPrepositionArrayElements() {
+		assertNotNull(wordGenerator.getPreposition());
+		assertEquals("to", wordGenerator.getPreposition()[0]);
+		assertEquals("from", wordGenerator.getPreposition()[1]);
+		assertEquals("over", wordGenerator.getPreposition()[2]);
+		assertEquals("under", wordGenerator.getPreposition()[3]);
+		assertEquals("on", wordGenerator.getPreposition()[4]);
+	}
+	
+	@Test
+	void testSentence() {
+		assertNotNull(wordGenerator.getSentence());
+		System.out.println("mbvv");
+	}
+}

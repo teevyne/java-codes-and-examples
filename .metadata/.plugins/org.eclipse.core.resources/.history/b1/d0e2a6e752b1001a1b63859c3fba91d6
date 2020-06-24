@@ -1,0 +1,10 @@
+package employeeSolution;
+
+public class CommissionEmployee implements Payable {
+
+	@Override
+	public double getPaymentAmount() {
+		return 0;
+	}
+
+}

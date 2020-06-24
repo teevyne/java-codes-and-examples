@@ -1,0 +1,47 @@
+package Randoms;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class RandomsTest {
+	Randoms wordGenerator;
+
+	@BeforeEach
+	void setUp() {
+		wordGenerator = new Randoms();
+	}
+
+	@Test
+	void  testObjectReference() {
+		assertNotNull(wordGenerator);
+	}
+	
+	@Test
+	void testArticleArrayElements() {
+		assertNotNull(wordGenerator.getArticle());
+		assertEquals("the", wordGenerator.getArticle()[0]);
+		assertEquals("a", wordGenerator.getArticle()[1]);
+		assertEquals("one", wordGenerator.getArticle()[2]);
+		assertEquals("some", wordGenerator.getArticle()[3]);
+		assertEquals("any", wordGenerator.getArticle()[4]);
+	}
+	
+	@Test
+	void testNounArrayElements() {
+		assertNotNull(wordGenerator.getNoun());
+		assertEquals("boy", wordGenerator.getNoun()[0]);
+		assertEquals("girl", wordGenerator.getNoun()[1]);
+		assertEquals("dog", wordGenerator.getNoun()[2]);
+		assertEquals("town", wordGenerator.getNoun()[3]);
+		assertEquals("car", wordGenerator.getNoun()[4]);
+	}
+	
+	@Test
+	void testVerbArrayElements() {
+		assertNull(wordGenerator.getVerb());
+		
+	}
+
+}

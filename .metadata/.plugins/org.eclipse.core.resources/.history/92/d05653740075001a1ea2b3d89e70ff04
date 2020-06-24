@@ -1,0 +1,27 @@
+package examplesDirectory;
+
+import java.io.IOException;
+import java.lang.IllegalStateException;
+import java.nio.file.Paths;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+
+public class CreditInquiry
+{
+	private final static MenuOption[] choices = MenuOption.values();
+
+	public static void main(String[] args)
+	{
+		// get user's request (e.g., zero, credit or debit balance)
+		MenuOption accountType = getRequest();
+
+		while (accountType != MenuOption.END)
+		{
+			switch (accountType)
+			{
+				case ZERO_BALANCE:
+					System.out.printf("%nAccounts with zero balances:%n");
+					break;
+				case CREDIT_BALANCE:
+					System.out.printf("%nAccounts with credit balances:%n");
+					break;

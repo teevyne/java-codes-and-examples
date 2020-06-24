@@ -1,0 +1,5 @@
+package employeeSolution;
+
+public class SalariedEmployee extends Employee {
+
+}

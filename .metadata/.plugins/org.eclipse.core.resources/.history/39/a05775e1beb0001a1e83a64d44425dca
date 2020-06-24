@@ -1,0 +1,27 @@
+package Randoms;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class RandomsTest {
+	Randoms wordGenerator;
+
+	@BeforeEach
+	void setUp() {
+		wordGenerator = new Randoms();
+	}
+
+	@Test
+	void  testObjectReference() {
+		assertNotNull(wordGenerator);
+	}
+	
+	@Test
+	void testArticleArrayElements() {
+		assertNotNull(wordGenerator.getArticle());
+		assertEquals("the", wordGenerator.getArticle()[0]);
+	}
+
+}

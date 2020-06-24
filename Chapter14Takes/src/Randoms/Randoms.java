@@ -1,0 +1,67 @@
+package Randoms;
+import java.security.SecureRandom;
+
+public class Randoms {
+	
+	private SecureRandom random = new SecureRandom();
+
+	private String[] article = { "the", "a", "one", "some", "any" };
+	private String[] noun = { "boy", "girl", "dog", "town", "car" };
+	private String[] verb = { "drove", "jumped", "ran", "walked", "skipped" };
+	private String[] preposition = { "to", "from", "over", "under", "on" };
+	
+	private StringBuilder sentence = new StringBuilder(75);
+
+	public String[] getArticle() {
+		return article;
+	}
+
+	public String[] getNoun() {
+		return noun;
+	}
+
+	public String[] getVerb() {
+		return verb;
+	}
+
+	public String[] getPreposition() {
+		return preposition ;
+	}
+	
+	public int generateRandomNumber() {
+		int number = 0 + random.nextInt(5);
+		return number;
+	}
+	
+	public void generateSentence() {
+		int number = generateRandomNumber();
+		sentence.append(article[number]);
+		sentence.append(" ");
+		
+		number = generateRandomNumber();
+		sentence.append(noun[number]);
+		sentence.append(" ");
+		
+		number = generateRandomNumber();
+		sentence.append(verb[number]);
+		sentence.append(" ");
+		
+		number = generateRandomNumber();
+		sentence.append(preposition[number]);
+		sentence.append(" ");
+		
+		number = generateRandomNumber();
+		sentence.append(article[number]);
+		sentence.append(" ");
+		
+		number = generateRandomNumber();
+		sentence.append(noun[number]);
+		sentence.append(".");
+	}
+
+	public StringBuilder getSentence() {
+		return sentence;
+	}
+	
+	
+}

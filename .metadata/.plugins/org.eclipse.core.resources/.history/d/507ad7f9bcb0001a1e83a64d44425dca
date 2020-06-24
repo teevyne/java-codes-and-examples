@@ -1,0 +1,16 @@
+package exerciseFourteen;
+
+public class RandonSentences {
+
+	
+	
+//	String[] article = { "The", "A", "One", "Some", "Any"};
+//	String[] noun = { "boy", "girl", "dog", "town", "car"};
+//	String[] verb = { "drove", "jumped", "ran", "walked", "skipped" };
+//	String[] preposition = { "to", "from", "over", "under", "on" };
+	
+	public String[] getArticle() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+}

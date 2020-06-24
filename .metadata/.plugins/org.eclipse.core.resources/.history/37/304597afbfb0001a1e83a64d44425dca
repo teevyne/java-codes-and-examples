@@ -1,0 +1,17 @@
+package Randoms;
+
+public class Randoms {
+
+	private String[] article = { "the", "a", "one", "some", "any" };
+	private String[] noun;
+
+	public String[] getArticle() {
+		return article;
+	}
+
+	public String[] getNoun() {
+		return noun;
+	}
+	
+	
+}

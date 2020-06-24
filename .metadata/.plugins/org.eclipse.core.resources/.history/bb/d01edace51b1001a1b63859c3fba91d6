@@ -1,0 +1,20 @@
+package employeeSolution;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class EmployeeTest {
+
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@Test
+	void createHierarchy() {
+		Payable john = new SalariedEmployee("John", "Johnson", "001122");
+		Employee steve = new HourlyEmployee("Steve", "Stephenson", "001123");
+	}
+
+}
