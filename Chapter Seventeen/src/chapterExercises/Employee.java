@@ -54,7 +54,6 @@ public class Employee
 	
 	@Override
 	public String toString() {
-		return String.format("%s\t%3.2f\t%s", getName(), getSalary(), getDepartment());
+		return String.format("%-8s %8.2f %s", getName(), getSalary(), getDepartment());
 	}
-	
 }

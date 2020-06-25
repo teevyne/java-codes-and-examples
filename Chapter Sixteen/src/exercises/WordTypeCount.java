@@ -44,6 +44,7 @@ public class WordTypeCount
 			else
 				map.put(word, 1); // add new word with a count of 1 to map
 		}
+		scanner.close();
 	}
 
 	// display map content
